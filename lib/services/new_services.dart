@@ -4,7 +4,7 @@ import 'package:flutter_news_apps/models/news_models.dart';
 import 'package:http/http.dart' as http;
 
 final _URL_NEWS = 'https://newsapi.org/v2';
-final _APIKEY = 'b10391596932442a87086436bb857ebc';
+final _APIKEY   = 'b10391596932442a87086436bb857ebc';
 
 class NewsServices with ChangeNotifier{
 
