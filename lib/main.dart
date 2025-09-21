@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_news_apps/pages/tabs_page.dart';
 import 'package:flutter_news_apps/services/new_services.dart';
 import 'package:flutter_news_apps/theme/tema.dart';
+import 'package:flutter_news_apps/home_bottom_nav.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -11,7 +11,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
@@ -19,10 +18,10 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => NewsServices()),
       ],
       child: MaterialApp(
-        title: 'Flutter Demo',
+        title: 'Flutter News App',
         theme: miTema,
         debugShowCheckedModeBanner: false,
-        home: TabsPage(),
+        home: const HomeWithBottomNav(), // ⬅️ bottom nav
       ),
     );
   }
